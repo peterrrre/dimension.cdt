@@ -102,7 +102,7 @@ struct project {
 
    const std::string readme_bare = " --- @ Project ---\n\n"
                                    " - How to Build -\n"
-                                   "   - run the command 'eosio-cpp -abigen -o @.wasm @.cpp'\n";
+                                   "   - run the command 'dimension-cpp -abigen -o @.wasm @.cpp'\n";
 
    std::string replace_name( const std::string& in ) {
       std::stringstream ss;

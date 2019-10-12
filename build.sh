@@ -1,6 +1,6 @@
 #! /bin/bash
 
-printf "\t=========== Building eosio.cdt ===========\n\n"
+printf "\t=========== Building dimension.cdt ===========\n\n"
 
 RED='\033[0;31m'
 NC='\033[0m'
@@ -27,39 +27,39 @@ if [[ "${unamestr}" == 'Darwin' ]]; then
    BOOST=/usr/local
    CXX_COMPILER=g++
    export ARCH="Darwin"
-   bash ./scripts/eosio_build_darwin.sh
+   bash ./scripts/dimension_build_darwin.sh
 else
    OS_NAME=$( cat /etc/os-release | grep ^NAME | cut -d'=' -f2 | sed 's/\"//gI' )
 
    case "$OS_NAME" in
       "Amazon Linux AMI")
          export ARCH="Amazon Linux AMI"
-         bash ./scripts/eosio_build_amazon.sh
+         bash ./scripts/dimension_build_amazon.sh
          ;;
       "CentOS Linux")
          export ARCH="Centos"
          export CMAKE=${HOME}/opt/cmake/bin/cmake
-         bash ./scripts/eosio_build_centos.sh
+         bash ./scripts/dimension_build_centos.sh
          ;;
       "elementary OS")
          export ARCH="elementary OS"
-         bash ./scripts/eosio_build_ubuntu.sh
+         bash ./scripts/dimension_build_ubuntu.sh
          ;;
       "Fedora")
          export ARCH="Fedora"
-         bash ./scripts/eosio_build_fedora.sh
+         bash ./scripts/dimension_build_fedora.sh
          ;;
       "Linux Mint")
          export ARCH="Linux Mint"
-         bash ./scripts/eosio_build_ubuntu.sh
+         bash ./scripts/dimension_build_ubuntu.sh
          ;;
       "Ubuntu")
          export ARCH="Ubuntu"
-         bash ./scripts/eosio_build_ubuntu.sh
+         bash ./scripts/dimension_build_ubuntu.sh
          ;;
       "Debian GNU/Linux")
          export ARCH="Debian"
-	 bash ./scripts/eosio_build_ubuntu.sh
+	 bash ./scripts/dimension_build_ubuntu.sh
 	 ;;
       *)
          printf "\\n\\tUnsupported Linux Distribution. Exiting now.\\n\\n"
@@ -104,17 +104,8 @@ if [ $? -ne 0 ]; then
 fi
 popd &> /dev/null
 
-printf "\n${bldred}\t      ___           ___           ___                       ___\n"
-printf "\t     /  /\\         /  /\\         /  /\\        ___          /  /\\ \n"
-printf "\t    /  /:/_       /  /::\\       /  /:/_      /  /\\        /  /::\\ \n"
-printf "\t   /  /:/ /\\     /  /:/\\:\\     /  /:/ /\\    /  /:/       /  /:/\\:\\ \n"
-printf "\t  /  /:/ /:/_   /  /:/  \\:\\   /  /:/ /::\\  /__/::\\      /  /:/  \\:\\ \n"
-printf "\t /__/:/ /:/ /\\ /__/:/ \\__\\:\\ /__/:/ /:/\\:\\ \\__\\/\\:\\__  /__/:/ \\__\\:\\ \n"
-printf "\t \\  \\:\\/:/ /:/ \\  \\:\\ /  /:/ \\  \\:\\/:/~/:/    \\  \\:\\/\\ \\  \\:\\ /  /:/ \n"
-printf "\t  \\  \\::/ /:/   \\  \\:\\  /:/   \\  \\::/ /:/      \\__\\::/  \\  \\:\\  /:/ \n"
-printf "\t   \\  \\:\\/:/     \\  \\:\\/:/     \\__\\/ /:/       /__/:/    \\  \\:\\/:/ \n"
-printf "\t    \\  \\::/       \\  \\::/        /__/:/        \\__\\/      \\  \\::/ \n"
-printf "\t     \\__\\/         \\__\\/         \\__\\/                     \\__\\/ \n${txtrst}"
+printf "\n${bldred}\t\n"
 
-printf "\\tFor more information:\\n"
-printf "\\tEOSIO website: https://eos.io\\n"
+printf "\t     Dimension.cdt has been successfully built  \n${txtrst}"
+
+printf "\\ website: https://dimensionchain.io\\n"

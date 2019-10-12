@@ -3,7 +3,7 @@
 - You should then see the hello.cpp file
 - Now run the compiler
 ```sh
-$ eosio-cpp -abigen hello.cpp -o hello.wasm
+$ dimension-cpp -abigen hello.cpp -o hello.wasm
 ```
 - Or with CMake
 ```sh

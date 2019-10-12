@@ -60,7 +60,7 @@
       create_symlink "llvm-objdump eosio-objdump"
       create_symlink "llvm-readelf eosio-readelf"
       create_symlink "eosio-cc eosio-cc"
-      create_symlink "eosio-cpp eosio-cpp"
+      create_symlink "dimension-cpp dimension-cpp"
       create_symlink "eosio-ld eosio-ld"
       create_symlink "eosio-pp eosio-pp"
       create_symlink "eosio-init eosio-init"
@@ -89,7 +89,7 @@
    
 	if ! make install
 	then
-		printf "\\n\\t>>>>>>>>>>>>>>>>>>>> MAKE installing EOSIO has exited with the above error.\\n\\n"
+		printf "\\n\\t>>>>>>>>>>>>>>>>>>>> MAKE installing  has exited with the above error.\\n\\n"
 		exit -1
 	fi
    popd &> /dev/null 
@@ -97,17 +97,8 @@
    install_symlinks   
    create_cmake_symlink "eosio.cdt-config.cmake"
 
-   printf "\n${bldred}\t      ___           ___           ___                       ___\n"
-   printf "\t     /  /\\         /  /\\         /  /\\        ___          /  /\\ \n"
-   printf "\t    /  /:/_       /  /::\\       /  /:/_      /  /\\        /  /::\\ \n"
-   printf "\t   /  /:/ /\\     /  /:/\\:\\     /  /:/ /\\    /  /:/       /  /:/\\:\\ \n"
-   printf "\t  /  /:/ /:/_   /  /:/  \\:\\   /  /:/ /::\\  /__/::\\      /  /:/  \\:\\ \n"
-   printf "\t /__/:/ /:/ /\\ /__/:/ \\__\\:\\ /__/:/ /:/\\:\\ \\__\\/\\:\\__  /__/:/ \\__\\:\\ \n"
-   printf "\t \\  \\:\\/:/ /:/ \\  \\:\\ /  /:/ \\  \\:\\/:/~/:/    \\  \\:\\/\\ \\  \\:\\ /  /:/ \n"
-   printf "\t  \\  \\::/ /:/   \\  \\:\\  /:/   \\  \\::/ /:/      \\__\\::/  \\  \\:\\  /:/ \n"
-   printf "\t   \\  \\:\\/:/     \\  \\:\\/:/     \\__\\/ /:/       /__/:/    \\  \\:\\/:/ \n"
-   printf "\t    \\  \\::/       \\  \\::/        /__/:/        \\__\\/      \\  \\::/ \n"
-   printf "\t     \\__\\/         \\__\\/         \\__\\/                     \\__\\/ \n${txtrst}"
+   printf "\n${bldred}\t     \n"
+   printf "\t    Dimension has been successfully installed \n${txtrst}"
 
 	printf "\\tFor more information:\\n"
-	printf "\\tEOSIO website: https://eos.io\\n"
+	printf "\\website: https://dimensionchain.io\\n"
