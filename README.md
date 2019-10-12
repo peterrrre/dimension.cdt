@@ -5,16 +5,11 @@ Dimension.CDT is a toolchain for WebAssembly (WASM) and set of tools to facilita
 ## Important!
 Dimension.CDT Version 1.3.x introduced quite a few breaking changes.  To have binary releases we needed to remove the concept of a core symbol from Dimension.CDT. This meant drastic changes to symbol, asset and other types/functions that were connected to them. Since these changes would be disruptive, we decided to add as many disruptive changes needed for future contract writing, so that disruption should only occur once. Please read the **_Differences between Version 1.2.x and Version 1.3.x_** section of this readme.
 
-### Binary Releases
-Dimension.CDT currently supports Linux x86_64 RPM packages.
+
 
 **If you have previously installed Dimension.CDT, please run the `uninstall` script (it is in the directory where you cloned Dimension.CDT) before downloading and using the binary releases.**
 
 
-#### Centos RPM Package Uninstall
-```sh
-$ sudo yum remove dimension.cdt
-```
 
 ### Guided Installation (Building from Scratch)
 ```sh
